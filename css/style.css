@@ -1,10 +1,81 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 h1 {
   font-size: 50px; }
 
 .main__content {
+  font-family: 'Lato', sans-serif;
   min-width: 320px;
   min-height: 100vh;
-  background-color: whitesmoke; }
+  position: relative; }
+  .main__content:after {
+    content: "";
+    background-image: url("./../img/StockSnap_1ZOMOXPNDS.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; }
+
+.intro {
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 2%; }
+  .intro > p {
+    display: inline-block;
+    padding: 0 0.2%; }
+
+.red__word {
+  color: red; }
+
+.blue__word {
+  color: blue; }
 
 .main__nav {
   width: 100%;
@@ -15,7 +86,74 @@ h1 {
   flex-direction: column;
   text-decoration: none;
   flex: 1;
-  margin-left: 10%;
-  margin-top: 2%; }
+  text-align: center;
+  margin-top: 2%;
+  font-size: 2rem;
+  color: black;
+  opacity: 0.2; }
   .nav__it:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    opacity: 1;
+    transition: .3s ease-in-out; }
+
+.main__squares {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  padding: 7% 7%; }
+
+.square {
+  display: flex;
+  box-sizing: border-box;
+  height: 45%;
+  width: 45%;
+  flex-grow: 1;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  opacity: 0.6; }
+  .square:hover {
+    color: black;
+    transition: .6s ease-in-out;
+    opacity: 1; }
+
+.first {
+  background-color: red;
+  font-size: 3rem;
+  border-top-left-radius: 70%; }
+  .first > p {
+    position: absolute;
+    top: 60%;
+    left: 65%; }
+
+.second {
+  background-color: blue;
+  border-top-right-radius: 70%;
+  font-size: 3rem;
+  color: red; }
+  .second > p {
+    position: absolute;
+    top: 60%;
+    left: 3%; }
+
+.third {
+  background-color: red;
+  border-bottom-left-radius: 70%;
+  font-size: 3rem; }
+  .third > p {
+    position: absolute;
+    top: 10%;
+    left: 82.5%; }
+
+.fourth {
+  background-color: blue;
+  border-bottom-right-radius: 70%;
+  font-size: 3rem;
+  color: red; }
+  .fourth > p {
+    position: absolute;
+    top: 10%;
+    left: 3%; }
